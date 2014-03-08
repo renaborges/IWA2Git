@@ -46,6 +46,14 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
+			
+			<?php if (AuthComponent::user()):
+		// The user is logged in, show the logout link
+		echo $this->Html->link('Log out', array('controller' => 'users', 'action' => 'logout'));
+
+				endif;
+			?>
+			
 		</div>
 		<div id="footer">
 			<?php echo $this->Html->link(

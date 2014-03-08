@@ -31,7 +31,7 @@ class UsersController extends AppController {
 				//Whatever you are in the website you can 'setFlash' to display to the user a message
                 $this->Session->setFlash(__('The user has been saved'));
 				//redirect method is redirecting to their on index. The action/function is to be redirected to the function index() in this file.
-                return $this->redirect(array('action' => 'index'));
+                return $this->redirect(array('action' => 'login'));
             }
             $this->Session->setFlash(
                 __('The user could not be saved. Please, try again.')
@@ -100,6 +100,7 @@ class UsersController extends AppController {
     return $this->redirect($this->Auth->logout());
 	}
 
+	
 }
 
 ?>
