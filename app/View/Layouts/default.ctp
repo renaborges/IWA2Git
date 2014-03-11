@@ -16,7 +16,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+$cakeDescription = __d('cake_dev', 'RenyWordBlog: The Blogger Spot');
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,7 +39,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+			<h1><?php echo $this->Html->link($cakeDescription, 'http://www.renaborges.com'); ?></h1>
 		</div>
 		<div id="content">
 
@@ -48,8 +48,11 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<?php echo $this->fetch('content'); ?>
 			
 			<?php if (AuthComponent::user()):
-		// The user is logged in, show the logout link
-		echo $this->Html->link('Log out', array('controller' => 'users', 'action' => 'logout'));
+					//The user is logged in, show the logout link
+					echo $this->Html->link('Log out', array('controller' => 'users', 'action' => 'logout'));
+				else:
+					// The user is not logged in, show login link
+					echo $this->Html->link('Log in', array('controller' => 'users', 'action' => 'login'));
 
 				endif;
 			?>
@@ -64,6 +67,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			?>
 		</div>
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
+	
 </body>
 </html>
