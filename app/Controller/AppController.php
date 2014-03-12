@@ -47,9 +47,12 @@ App::uses('Controller', 'Controller');
         )
     );
 	
+	
 	 public function beforeFilter() {
         $this->Auth->allow('index', 'view');
 	}
+	
+	
 	
 	public function isAuthorized($user) {
     // Admin can access every action
@@ -61,5 +64,9 @@ App::uses('Controller', 'Controller');
     return false;
 	
 	}   
+	
+	
+    
+
 }
 ?>

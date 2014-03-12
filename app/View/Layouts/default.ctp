@@ -59,11 +59,7 @@ $cakeDescription = __d('cake_dev', 'RenyWordBlog: The Blogger Spot');
 			
 		</div>
 		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
+			<?php echo $this->Html->tag('span', '&copy Renata Borges', array('class' => 'welcome'));
 			?>
 		</div>
 	</div>
