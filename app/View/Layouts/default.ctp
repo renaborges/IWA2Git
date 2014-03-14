@@ -47,6 +47,7 @@ $cakeDescription = __d('cake_dev', 'RenyWordBlog: The Blogger Spot');
 
 			<?php echo $this->fetch('content'); ?>
 			
+			<div id="logout">
 			<?php if (AuthComponent::user()):
 					//The user is logged in, show the logout link
 					echo $this->Html->link('Log out', array('controller' => 'users', 'action' => 'logout'));
@@ -56,6 +57,7 @@ $cakeDescription = __d('cake_dev', 'RenyWordBlog: The Blogger Spot');
 
 				endif;
 			?>
+			</div>
 			
 		</div>
 		<div id="footer">
