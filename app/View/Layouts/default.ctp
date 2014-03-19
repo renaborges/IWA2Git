@@ -40,7 +40,9 @@ $cakeDescription = __d('cake_dev', 'RenyWordBlog: The Blogger Spot');
 	<div id="container">
 		<div id="header">
 			<h1><?php echo $this->Html->link($cakeDescription, 'http://www.renaborges.com'); ?></h1>
+		Welcome <?php print $this->Session->read('Auth.User.username'); ?>
 		</div>
+		
 		<div id="content">
 
 			<?php echo $this->Session->flash(); ?>
