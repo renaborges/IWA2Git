@@ -21,10 +21,14 @@
 		<td><?php echo h($user['User']['role']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['created']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['modified']); ?>&nbsp;</td>
+		
 		<td class="actions">
+		
+			<?php if ($logged_user['id'] == $user['User']['id'] || $logged_user['role'] == 'admin'):?>
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $user['User']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $user['User']['id'])); ?>
 			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $user['User']['id']), null, __('Are you sure you want to delete # %s?', $user['User']['id'])); ?>
+			<?php endif; ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -47,6 +51,8 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?></li>
+		
+		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?> </li>
 	</ul>
+	
 </div>

@@ -1,7 +1,32 @@
 <?php
 class UsersController extends AppController {
     
-
+	public function beforeFilter() {
+    parent::beforeFilter();
+    // Allow users to register and logout. If 'add and logout' is not passed no one can visit the website. You could also pass 'index & edit' for example
+	//Auth is a big class that has a component called allow()
+    $this->Auth->allow('add', 'logout');
+	}	
+	
+	/**Uses the configured Authorization adapters to check whether 
+	*or not a user is authorized. Each adapter will be checked in 
+	*sequence, if any of them return true, then the user will be 
+	*authorized for the request.
+	*/
+	public function isAuthorized($user){
+	
+		if (isset($user['role']) && $user['role'] === 'admin') {
+			return true;
+		}		
+		
+		if(in_array($this->action, array('edit', 'delete'))){
+					if($user['id'] != $this->request->params['pass'][0]){
+					return false;
+			}
+		}
+		return true;
+	}
+	
     public function index() {
 		//The User is the Model, it goes 1 level down to posts table to find the posts of an user
         $this->User->recursive = 0;
@@ -78,28 +103,20 @@ class UsersController extends AppController {
         }
         $this->Session->setFlash(__('User was not deleted'));
         return $this->redirect(array('action' => 'index'));
-    }
+    }	
 	
-	public function beforeFilter() {
-    parent::beforeFilter();
-    // Allow users to register and logout. If 'add and logout' is not passed no one can visit the website. You could also pass 'index & edit' for example
-	//Auth is a big class that has a component called allow()
-    $this->Auth->allow('add', 'logout');
-	}
+		public function login() {
+			if ($this->request->is('post')) {
+				if ($this->Auth->login()) {
+				return $this->redirect($this->Auth->redirect(array('controller' => 'posts', 'action'=>'index')));
+				}
+			$this->Session->setFlash(__('Invalid username or password, try again'));
+			}
+		}
 
-	public function login() {
-    if ($this->request->is('post')) {
-        if ($this->Auth->login()) {
-            return $this->redirect($this->Auth->redirect());
-        }
-        $this->Session->setFlash(__('Invalid username or password, try again'));
-    }
-	}
-
-	public function logout() {
-    return $this->redirect($this->Auth->logout());
-	}
-
+		public function logout() {
+			return $this->redirect($this->Auth->logout());
+		}
 	
 }
 
