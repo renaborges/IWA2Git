@@ -60,7 +60,7 @@ App::uses('Controller', 'Controller');
         return true;
     }
 	
-    // Default deny
+    // Default deny. No admin, so can't do anything
     return false;
 	
 	}   

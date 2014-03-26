@@ -1,52 +1,38 @@
-
-
+<!-- File: /app/View/Users/view.ctp -->
 <div class="users view">
+<p><?php echo $this->Html->link('View all Users',array('action'=>'index'));
+?></p>
+<!-- debug($user); -->
 
-<h2><?php  echo __('User');?></h2>
-	<dl>
+<p><h1>UserName:<?php echo ($user['User']['username']); ?></h1></p>
+<p> Password:<?php echo $user['User']['password']; ?> </p>
+<p> Role: <?php echo ($user['User']['role']); ?> </p>
+<p> Created: <?php echo $user['User']['created']; ?> </p>
 
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Username'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['username']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Password'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['password']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Role'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['role']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Created'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['created']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['modified']); ?>
-			&nbsp;
-		</dd>
-	</dl>
+
+<dt><?php echo 'You have  '.count($user['Post']).'  Posts '; ?></dt>
+
+<dd style='content:\A; white-space: pre'><?php for ($x= 0; $x< count($user['Post']); $x++){
+    echo $this->Html->link(
+                    ($user['Post'][$x]['title']),
+                    array('controller'=> 'Posts','action' => 'view', $user['Post'][$x]['id']));
+     
+    echo __("\n");
+    echo __('Created '.h($user['Post'][$x]['created']));
+    echo __("\n");
+   /*  echo __('Title: '.h($user['Post'][$x]['title'])); 
+    echo __('Body: '.h($user['Post'][$x]['body']));
+    echo __('Created '.h($user['Post'][$x]['created']));  */
+   }
+  ?>
+  &nbsp;
+  </dd>
+</dl>
+  
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<?php if ($logged_user['id'] == $user ['User']['id'] || $logged_user['role'] == 'admin'): ?>
-		<li><?php echo $this->Html->link(__('Edit User'), array('action' => 'edit', $user['User']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete User'), array('action' => 'delete', $user['User']['id']), null, __('Are you sure you want to delete # %s?', $user['User']['id'])); ?> </li>
-		<?php endif; ?>
-		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?> </li>
-		
-	</ul>
-	
+<div class = "actions">
+<?php echo $this->Html->link(
+    'Go back to index page',
+    array('controller' => 'users', 'action' => 'index')
+); ?>
 </div>

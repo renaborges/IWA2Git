@@ -29,6 +29,7 @@ $cakeDescription = __d('cake_dev', 'RenyWordBlog: The Blogger Spot');
 	<?php
 		echo $this->Html->meta('icon');
 
+		echo $this->Html->css('bootstrap');
 		echo $this->Html->css('cake.generic');
 
 		echo $this->fetch('meta');
@@ -39,8 +40,30 @@ $cakeDescription = __d('cake_dev', 'RenyWordBlog: The Blogger Spot');
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://www.renaborges.com'); ?></h1>
+		<ul class="nav nav-tabs">
+		
+			<h1><?php echo $this->Html->link($cakeDescription, 'http://www.renaborges.com'); ?></h1>			
+			<li> <?php echo $this->Html->link('Home', array('controller' =>'users', 'action'=>'index')); ?></li>
+			<li> <?php echo $this->Html->link('Posts', array('controller' =>'posts', 'action'=>'index')); ?></li>
+			<li> <?php echo $this->Html->link('Add Post', array('controller' =>'posts', 'action'=>'add')); ?></li>
+			<li> <?php if (AuthComponent::user()):
+					//The user is logged in, show the logout link
+					echo $this->Html->link('Log out', array('controller' => 'users', 'action' => 'logout'));
+				else:
+					// The user is not logged in, show login link
+					echo $this->Html->link('Log in', array('controller' => 'users', 'action' => 'login'));
+
+				endif;
+			?></li>
+			
+			
+			</ul>
+
+		<!-- Site-wide 'Welcome message' here in default.ctp mean that it will appear in every page-->
 		Welcome <?php print $this->Session->read('Auth.User.username'); ?>
+		
+			
+			
 		</div>
 		
 		<div id="content">
@@ -49,19 +72,9 @@ $cakeDescription = __d('cake_dev', 'RenyWordBlog: The Blogger Spot');
 
 			<?php echo $this->fetch('content'); ?>
 			
-			<div id="logout">
-			<?php if (AuthComponent::user()):
-					//The user is logged in, show the logout link
-					echo $this->Html->link('Log out', array('controller' => 'users', 'action' => 'logout'));
-				else:
-					// The user is not logged in, show login link
-					echo $this->Html->link('Log in', array('controller' => 'users', 'action' => 'login'));
-
-				endif;
-			?>
-			</div>
 			
 		</div>
+		
 		<div id="footer">
 			<?php echo $this->Html->tag('span', '&copy Renata Borges', array('class' => 'welcome'));
 			?>

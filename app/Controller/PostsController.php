@@ -73,6 +73,7 @@
     }
 	}
 
+	//check if user is logged in, if yes, can add a post
 	public function isAuthorized($user) {
     // All registered users can add posts
     if ($this->action === 'add') {
