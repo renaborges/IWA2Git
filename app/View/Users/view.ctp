@@ -25,6 +25,7 @@
     echo __('Created '.h($user['Post'][$x]['created']));  */
    }
   ?>
+  
   &nbsp;
   </dd>
 </dl>
