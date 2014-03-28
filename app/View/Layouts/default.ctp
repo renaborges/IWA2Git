@@ -23,7 +23,7 @@ $cakeDescription = __d('cake_dev', 'RenyWordBlog: The Blogger Spot');
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo $cakeDescription ?>:
+		
 		<?php echo $title_for_layout; ?>
 	</title>
 	<?php
@@ -42,7 +42,7 @@ $cakeDescription = __d('cake_dev', 'RenyWordBlog: The Blogger Spot');
 		<div id="header">
 		<ul class="nav nav-tabs">
 		
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://www.renaborges.com'); ?></h1>			
+						
 			<li> <?php echo $this->Html->link('Home', array('controller' =>'users', 'action'=>'index')); ?></li>
 			<li> <?php echo $this->Html->link('Posts', array('controller' =>'posts', 'action'=>'index')); ?></li>
 			<li> <?php echo $this->Html->link('Add Post', array('controller' =>'posts', 'action'=>'add')); ?></li>
@@ -76,7 +76,9 @@ $cakeDescription = __d('cake_dev', 'RenyWordBlog: The Blogger Spot');
 		</div>
 		
 		<div id="footer">
+			
 			<?php echo $this->Html->tag('span', '&copy Renata Borges', array('class' => 'welcome'));
+			
 			?>
 		</div>
 	</div>
