@@ -22,16 +22,15 @@ $cakeDescription = __d('cake_dev', 'RenyWordBlog: The Blogger Spot');
 <html>
 <head>
 	<?php echo $this->Html->charset(); ?>
-	<title>
-		
-		<?php echo $title_for_layout; ?>
+	<title>		
+		Reny's Blog
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('bootstrap');
+		echo $this->Html->css('bootstrap.css');
 		echo $this->Html->css('cake.generic');
-
+		
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
@@ -39,7 +38,7 @@ $cakeDescription = __d('cake_dev', 'RenyWordBlog: The Blogger Spot');
 </head>
 <body>
 	<div id="container">
-		<div id="header">
+		
 		<ul class="nav nav-tabs">
 		
 						
@@ -48,7 +47,9 @@ $cakeDescription = __d('cake_dev', 'RenyWordBlog: The Blogger Spot');
 			<li> <?php echo $this->Html->link('Add Post', array('controller' =>'posts', 'action'=>'add')); ?></li>
 			<li> <?php if (AuthComponent::user()):
 					//The user is logged in, show the logout link
+					
 					echo $this->Html->link('Log out', array('controller' => 'users', 'action' => 'logout'));
+					echo 'Welcome '.AuthComponent::user('username');
 				else:
 					// The user is not logged in, show login link
 					echo $this->Html->link('Log in', array('controller' => 'users', 'action' => 'login'));
@@ -59,12 +60,13 @@ $cakeDescription = __d('cake_dev', 'RenyWordBlog: The Blogger Spot');
 			
 			</ul>
 
-		<!-- Site-wide 'Welcome message' here in default.ctp mean that it will appear in every page-->
-		Welcome <?php print $this->Session->read('Auth.User.username'); ?>
+		<!-- Site-wide 'Welcome message' here in default.ctp mean that it will appear in every page
+		echo Welcome print $this->Session->read('Auth.User.username');-->
+	
 		
 			
 			
-		</div>
+		
 		
 		<div id="content">
 
