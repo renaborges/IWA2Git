@@ -38,7 +38,9 @@ $cakeDescription = __d('cake_dev', 'RenyWordBlog: The Blogger Spot');
 </head>
 <body>
 	<div id="container">
-		
+	
+
+		 <div class="navbar-inner">
 		<ul class="nav nav-tabs">
 		
 						
@@ -55,28 +57,47 @@ $cakeDescription = __d('cake_dev', 'RenyWordBlog: The Blogger Spot');
 					echo $this->Html->link('Log in', array('controller' => 'users', 'action' => 'login'));
 
 				endif;
-			?></li>
+			?>
+			</li>
 			
 			
-			</ul>
+		</ul>
 
-		<!-- Site-wide 'Welcome message' here in default.ctp mean that it will appear in every page
+		 <!--Site-wide 'Welcome message' here in default.ctp mean that it will appear in every page
 		echo Welcome print $this->Session->read('Auth.User.username');-->
-	
-		
-			
-			
-		
 		
 		<div id="content">
+		
+			<div class="section" id="section0">
+			
+				<div class="row">
+				
+					
+						<div class="intro">
+					    <div class="col-md-6">
+						<h2>This is a test</h2>
 
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
 			
-			
+						</div>
+					</div>
+					
+					<div class="col-md-6">
+						<div class="intro">
+						
+						<h2>This is another test</h2>
+						
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
 		</div>
-		
+			
+			
 		<div id="footer">
 			
 			<?php echo $this->Html->tag('span', '&copy Renata Borges', array('class' => 'welcome'));
@@ -84,6 +105,12 @@ $cakeDescription = __d('cake_dev', 'RenyWordBlog: The Blogger Spot');
 			?>
 		</div>
 	</div>
+	</div>
+	 <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <?php echo $this->Html->script('bootstrap.min.js'); ?>
 	
 </body>
 </html>

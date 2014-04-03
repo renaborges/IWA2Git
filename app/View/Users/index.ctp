@@ -1,9 +1,11 @@
 
 <div class="users index">
+
 	<h2><?php echo __('Users');?></h2>
 	
 	<table cellpadding="0" cellspacing="0">
 	<tr>
+			<!--The 'sort' word is used to sort the links ascending or descending -->
 			<th><?php echo $this->Paginator->sort('id');?></th>
 			<th><?php echo $this->Paginator->sort('username');?></th>
 			<th><?php echo $this->Paginator->sort('password');?></th>
@@ -12,6 +14,10 @@
 			<th><?php echo $this->Paginator->sort('modified');?></th>
 			<th class="actions"><?php echo __('Actions');?></th>
 	</tr>
+	
+	</div>
+	
+	
 	<?php
 	$i = 0;
 	foreach ($users as $user): ?>
@@ -49,11 +55,17 @@
 	?>
 	</div>
 </div>
+
+</div>
+</div>
 <div class="actions">
+
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		
 		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?> </li>
 	</ul>
 	
+	</div>
+	</div>
 </div>
