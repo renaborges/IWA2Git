@@ -15,7 +15,7 @@
 			<th class="actions"><?php echo __('Actions');?></th>
 	</tr>
 	
-	</div>
+
 	
 	
 	<?php
@@ -54,11 +54,10 @@
 		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
 	?>
 	</div>
-</div>
 
 </div>
-</div>
-<div class="actions">
+
+<!-- <div class="actions">
 
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
@@ -66,6 +65,5 @@
 		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?> </li>
 	</ul>
 	
-	</div>
-	</div>
-</div>
+	</div> -->
+	
