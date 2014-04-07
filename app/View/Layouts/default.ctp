@@ -55,8 +55,10 @@
 		echo Welcome print $this->Session->read('Auth.User.username');-->
 		
 	
+	
+	
 		<div id="content">
-		
+		<div class="well well-md background rsvp_ww">
 		
 			<?php echo $this->Session->flash(); ?>
 
@@ -65,7 +67,10 @@
 		
                </div> 
 			   
-			   <div class="well well-md background footer">	
+			   </div>
+			   
+			   
+			   <div class="well well-md footer">	
 		<!--<div id="footer">-->
 			
 			<?php echo $this->Html->tag('span', '&copy Renata Borges', array('class' => 'welcome'));

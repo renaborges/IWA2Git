@@ -1,16 +1,27 @@
 <!-- File: /app/View/Users/view.ctp -->
 
+<div class="row"> 
 
-<div class="well well-md background rsvp_ww">
 
 <p><?php echo $this->Html->link('View all Users',array('action'=>'index'));
 ?></p>
 <!-- debug($user); -->
 
-<p><h4>User Name:<?php echo ($user['User']['username']); ?></h4></p>
+<!-- <p><h4>User Name:<?php echo ($user['User']['username']); ?></h4></p>
 <p> Password:<?php echo $user['User']['password']; ?> </p>
 <p> Role: <?php echo ($user['User']['role']); ?> </p>
-<p> Created: <?php echo $user['User']['created']; ?> </p>
+<p> Created: <?php echo $user['User']['created']; ?> </p>-->
+
+
+<div class="col-lg-4">
+<?php echo $this->element('profile');?>
+</div>
+
+
+
+
+
+<div class="col-lg-8">
 
 <table class="table table-bordered">
 <tr><?php echo 'You have  '.count($user['Post']).'  Posts '; ?></tr>
@@ -23,9 +34,7 @@
     echo __("\n");
     echo __('Created '.h($user['Post'][$x]['created']));
     echo __("\n");
-   /*  echo __('Title: '.h($user['Post'][$x]['title'])); 
-    echo __('Body: '.h($user['Post'][$x]['body']));
-    echo __('Created '.h($user['Post'][$x]['created']));  */
+  
    }
   ?>
 
@@ -37,7 +46,7 @@
 
 
 </div>
-
+</div>
 <?php echo $this->Html->link(
     'Go back to index page',
     array('controller' => 'users', 'action' => 'index')
