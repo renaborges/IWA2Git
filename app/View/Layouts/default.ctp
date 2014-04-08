@@ -56,8 +56,7 @@
 		
 	
 	
-	
-		<div class="well well-md rsvp_ww">
+		<div class="well well-md rsvp_container">
 		
 			<?php echo $this->Session->flash(); ?>
 
@@ -78,8 +77,7 @@
 		
                 </div>
 	</div>
-	 <!-- Bootstrap core JavaScript
-    ================================================== -->
+	 <!-- Core JS -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <?php echo $this->Html->script('bootstrap.js'); ?>

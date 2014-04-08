@@ -3,17 +3,20 @@
 body{
 
 background-image:url(../img/jf.jpg);
+font-family: Georgia;
 
 }
 
  
- .rsvp_www{
-min-height: 280px;
-max-height: 280px;
-width:325px;
+ .rsvp_view{
+min-height: 380px;
+max-height: 380px;
+width: 280px;
 padding:20px;
 border:5px solid gray;
-margin:5px;
+margin-top:30px;
+margin-left:10px;
+margin-right: 220px;
 padding-top: 10px;
 padding-left: 30px;
  
@@ -25,14 +28,15 @@ padding-top: 10px;
 }
  
  
-.rsvp_ww{
+.rsvp_container{
 min-height: 380px;
 max-height: 380px;
+width: 480px;
 padding:20px;
 border:5px solid gray;
 margin-top:30px;
 margin-left:10px;
-margin-right: 10px;
+margin-right: 220px;
 padding-top: 10px;
 padding-left: 30px;
  
@@ -53,3 +57,121 @@ text-align: right;
    }
 
 }
+
+
+
+
+
+
+
+@CHARSET "ISO-8859-1";
+
+
+p{
+	font-size: 1em;
+	text-align:justify;
+}
+
+.section{
+	text-align:center;
+}
+
+#menu li {
+	display:inline-block;
+	margin: 10px;
+	color: #000;
+	background:#fff;
+	background: rgba(255,255,255, 0.5);
+	-webkit-border-radius: 10px; 
+            border-radius: 10px; 
+}
+
+#googleMap {
+	width: 400px;
+	height: 380px;
+}
+
+#description {
+text-align: left;
+}
+
+#menu li a{
+	text-decoration:none;
+	color: #000;
+}
+
+#menu li:hover{
+	background: rgba(255,255,255, 0.8);
+}
+
+#menu li a,
+#menu li.active a{
+	padding: 9px 18px;
+	display:block;
+}
+
+#menu{
+	position:fixed;
+	top:0;
+	left:10;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
+#section0 img,
+#section1 img{
+	margin: 20px 0 0 0;
+}	
+#section2 img{
+	margin: 20px 0 0 52px;	
+}
+
+.intro p{
+	width: 50%;
+	margin: 0 auto;
+	font-size: 1.25em;
+}
+
+
+.background {
+	background-color:rgb(163, 159, 247);
+	
+}
+	
+.invite {
+	height:445px;
+	width:500px;
+}
+	
+.invite2 {
+	height:445px;
+	width:600px;
+}
+.photos {
+	height:270px; 
+	width:325px;
+}
+	
+h1, h2, h3{
+	text-align:center;
+	font-family: Georgia;
+	
+}
+
+h2{
+	font-size:30px;
+}
+	
+h3{
+	font-size:20px;
+}
+	
+
+.rsvp_ww{
+ min-height: 425px;
+ max-height: 425px;
+ }
+
+

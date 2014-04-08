@@ -1,6 +1,8 @@
 <!-- File: /app/View/Posts/index.ctp  (edit links added) -->
 
-<h4>Blog posts</h4>
+
+<fieldset>
+ <legend><?php echo __('Blog posts'); ?></legend>
 <p><?php echo $this->Html->link("Add Post", array('action' => 'add')); ?></p>
 <table>
     <tr>
@@ -45,3 +47,4 @@
 <?php endforeach; ?>
 
 </table>
+</fieldset>

@@ -1,7 +1,11 @@
-<h4>Add Post</h4>
+
+<fieldset>
+ <legend><?php echo __('Add Post'); ?></legend>
 <?php
 echo $this->Form->create('Post');
 echo $this->Form->input('title');
 echo $this->Form->input('body', array('rows' => '3'));
+
 echo $this->Form->end('Save Post');
 ?>
+</fieldset>
