@@ -25,11 +25,16 @@
 	<title>		
 		Reny's Blog
 	</title>
-	<?php
-		echo $this->Html->meta('icon');
 	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0,width=device-width,user-scalable=no">
+	<meta name="generator" content="Renaborges.com">
+	<meta name="application-name" content="Renaborges.com">
+	<meta name="description" content="Start your Blog, change the World.">
+	<?php
+		echo $this->Html->meta('icon');	
 		echo $this->Html->css('bootstrap');
-			echo $this->Html->css('mystyle.css');
+		echo $this->Html->css('mystyle.css');
 		echo $this->Html->css('cake.generic');
 		
 		
@@ -38,11 +43,6 @@
 		echo $this->fetch('script');
 	?>
     
-            <!-- <style>
-        body {
-          padding-top: 70px;
-        }
-    </style> -->
     
 </head>
 <body>
@@ -57,8 +57,7 @@
 	
 	
 	
-		<div id="content">
-		<div class="well well-md background rsvp_ww">
+		<div class="well well-md rsvp_ww">
 		
 			<?php echo $this->Session->flash(); ?>
 
@@ -67,7 +66,7 @@
 		
                </div> 
 			   
-			   </div>
+			   
 			   
 			   
 			   <div class="well well-md footer">	

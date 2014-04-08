@@ -1,7 +1,7 @@
 
-<div class="users index">
 
-	<h2><?php echo __('Users');?></h2>
+
+	<h4><?php echo __('Users');?></h4>
 	
 	<table cellpadding="0" cellspacing="0">
 	<tr>
@@ -55,7 +55,7 @@
 	?>
 	</div>
 
-</div>
+
 
 <!-- <div class="actions">
 

@@ -1,6 +1,7 @@
 <!-- File: /app/View/Users/view.ctp -->
 
 <div class="row"> 
+<div class="well well-md rsvp_www">
 
 
 <p><?php echo $this->Html->link('View all Users',array('action'=>'index'));
@@ -15,6 +16,7 @@
 
 <div class="col-lg-4">
 <?php echo $this->element('profile');?>
+
 </div>
 
 
@@ -46,8 +48,10 @@
 
 
 </div>
+
 </div>
 <?php echo $this->Html->link(
     'Go back to index page',
     array('controller' => 'users', 'action' => 'index')
 ); ?>
+

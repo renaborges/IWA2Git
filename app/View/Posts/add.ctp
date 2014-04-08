@@ -1,4 +1,4 @@
-<h1>Add Post</h1>
+<h4>Add Post</h4>
 <?php
 echo $this->Form->create('Post');
 echo $this->Form->input('title');
