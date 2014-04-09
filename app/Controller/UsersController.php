@@ -118,6 +118,15 @@ class UsersController extends AppController {
 			return $this->redirect($this->Auth->logout());
 		}
 	
+			
+    public function home() {
+		//The User is the Model, it goes 1 level down to posts table to find the posts of an user
+        $this->User->recursive = 0;
+		//DB (Model) gives the results and now it's passed over to the view to interpreter - using HTML in this case.
+		//paginate is a method that display many pages in a block - click page 1 - page 2 etc
+        $this->set('users', $this->paginate());
+    }
 }
+
 
 ?>

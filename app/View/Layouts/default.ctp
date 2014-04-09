@@ -49,34 +49,35 @@
 	
     <?php echo $this->element('navbar');?>
     
+	<!-- Start of Container -->
     <div class="container">            
-            	 
-		 <!--Site-wide 'Welcome message' here in default.ctp mean that it will appear in every page
-		echo Welcome print $this->Session->read('Auth.User.username');-->
-		
-	
-	
+    	
 		<div class="well well-md rsvp_container">
 		
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
+
 			
+        </div> 
 		
-               </div> 
+		
+		
+		
+			   		   
 			   
 			   
-			   
-			   
-			   <div class="well well-md footer">	
-		<!--<div id="footer">-->
-			
+		<div class="well well-md footer">	
+				
 			<?php echo $this->Html->tag('span', '&copy Renata Borges', array('class' => 'welcome'));
 			
 			?>
 		
-                </div>
+        </div>
+		
 	</div>
+	<!-- End of Container -->
+	
 	 <!-- Core JS -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>

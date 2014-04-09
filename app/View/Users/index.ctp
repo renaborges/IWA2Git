@@ -1,8 +1,9 @@
 
 
 
-	<h4><?php echo __('Users');?></h4>
 	
+	<fieldset>
+ <legend><?php echo __('Users'); ?></legend>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<!--The 'sort' word is used to sort the links ascending or descending -->
@@ -54,16 +55,6 @@
 		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
 	?>
 	</div>
+<fieldset>
 
-
-
-<!-- <div class="actions">
-
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		
-		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?> </li>
-	</ul>
-	
-	</div> -->
 	
