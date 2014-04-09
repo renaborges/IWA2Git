@@ -56,6 +56,39 @@ margin:10px;
 text-align: right;
    }
 
+
+.home_content {
+min-height: 120px;
+max-height: 120px;
+width: 230px;
+padding:20px;
+border:5px solid gray;
+margin:10px;
+float: left;
+
+}
+
+
+.home_content2 {
+min-height: 120px;
+max-height: 120px;
+width: 230px;
+padding:20px;
+border:5px solid gray;
+margin:10px;
+float: left;
+
+}
+
+.home_content3 {
+min-height: 330px;
+max-height: 330px;
+width: 490px;
+padding:10px;
+border:5px solid gray;
+margin:10px;
+float: right;
+
 }
 
 
@@ -64,7 +97,6 @@ text-align: right;
 
 
 
-@CHARSET "ISO-8859-1";
 
 
 p{

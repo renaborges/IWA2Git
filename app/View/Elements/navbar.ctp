@@ -2,11 +2,11 @@
 		<ul class="nav nav-tabs">
 		
 				
-			<li> <?php echo $this->Html->link('Home', array('controller' =>'users', 'action'=>'index')); ?></li>
+			<li> <?php echo $this->Html->link('Home', array('controller' =>'users', 'action'=>'home')); ?></li>
 			<li> <?php echo $this->Html->link('Posts', array('controller' =>'posts', 'action'=>'index')); ?></li>
 			<li> <?php echo $this->Html->link('Add Post', array('controller' =>'posts', 'action'=>'add')); ?></li>
 			<li> <?php echo $this->Html->link('All Users',array('controller' =>'users', 'action'=>'index'));?></li>
-			<li> <?php echo $this->Html->link('My home',array('controller' =>'users', 'action'=>'home'));?></li>
+			
 					
 			
 			<div class="register">
