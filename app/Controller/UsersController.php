@@ -5,7 +5,7 @@ class UsersController extends AppController {
     parent::beforeFilter();
     // Allow users to register and logout. If 'add and logout' is not passed no one can visit the website. You could also pass 'index & edit' for example
 	//Auth is a big class that has a component called allow()
-    $this->Auth->allow('add', 'logout');
+    $this->Auth->allow('add', 'logout', 'home');
 	}	
 	
 	/**Uses the configured Authorization adapters to check whether 

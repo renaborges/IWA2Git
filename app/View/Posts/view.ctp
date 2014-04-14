@@ -1,5 +1,5 @@
 
-<h1><?php echo h($post['Post']['title']); ?></h1>
+<h3><?php echo h($post['Post']['title']); ?></h3>
 
 <p><small>Created: <?php echo $post['Post']['created']; ?></small></p>
 

@@ -52,7 +52,7 @@
 	<!-- Start of Container -->
     <div class="container">            
     	
-		<div class="well well-md rsvp_container">
+		<div class="well well-md my_container">
 		
 			<?php echo $this->Session->flash(); ?>
 

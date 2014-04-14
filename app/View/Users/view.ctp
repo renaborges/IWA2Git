@@ -1,7 +1,7 @@
 <!-- File: /app/View/Users/view.ctp -->
 
 
-<div class="well well-md rsvp_view">
+<div class="well well-md my_view">
 
 <fieldset>
  <legend><?php echo __('User Profile: '); ?></legend>

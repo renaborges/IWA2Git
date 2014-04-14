@@ -2,15 +2,15 @@
 
 body{
 
-background-image:url(../img/jf.jpg);
+background-image:url(../img/bckg.jpg);
 font-family: Georgia;
 
 }
 
  
-.rsvp_view{
-min-height: 380px;
-max-height: 380px;
+.my_view{
+min-height: 328px;
+max-height: 328px;
 width: 280px;
 padding:20px;
 border:5px solid gray;
@@ -28,7 +28,7 @@ padding-top: 10px;
 }
  
  
-.rsvp_container{
+.my_container{
 min-height: 380px;
 max-height: 380px;
 
@@ -43,9 +43,7 @@ padding-left: 30px;
  }
 
  
- .section{
-	text-align:center;
-}
+
 
 .footer {
 min-height: 25px;
@@ -57,26 +55,21 @@ text-align: right;
    }
 
 
-.home_content {
-min-height: 120px;
-max-height: 120px;
+.home_content2 {
+min-height: 330px;
+max-height: 330px;
 width: 230px;
-padding:20px;
+padding:10px;
 border:5px solid gray;
 margin:10px;
+margin-right:10px;
 float: left;
-
+text-align: left;
 }
 
 
-.home_content2 {
-min-height: 120px;
-max-height: 120px;
-width: 230px;
-padding:20px;
-border:5px solid gray;
-margin:10px;
-float: left;
+
+.txtArea { width:180px; height:180px; 
 
 }
 
@@ -88,7 +81,13 @@ padding:10px;
 border:5px solid gray;
 margin:10px;
 float: right;
+text-align: center;
+}
 
+
+.row > div {
+        background-color: #dedef8;
+        box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;
 }
 
 
@@ -99,112 +98,7 @@ float: right;
 
 
 
-p{
-	font-size: 1em;
-	text-align:justify;
-}
-
-.section{
-	text-align:center;
-}
-
-#menu li {
-	display:inline-block;
-	margin: 10px;
-	color: #000;
-	background:#fff;
-	background: rgba(255,255,255, 0.5);
-	-webkit-border-radius: 10px; 
-            border-radius: 10px; 
-}
-
-#googleMap {
-	width: 400px;
-	height: 380px;
-}
-
-#description {
-text-align: left;
-}
-
-#menu li a{
-	text-decoration:none;
-	color: #000;
-}
-
-#menu li:hover{
-	background: rgba(255,255,255, 0.8);
-}
-
-#menu li a,
-#menu li.active a{
-	padding: 9px 18px;
-	display:block;
-}
-
-#menu{
-	position:fixed;
-	top:0;
-	left:10;
-	height: 40px;
-	z-index: 70;
-	width: 100%;
-	padding: 0;
-	margin:0;
-}
-#section0 img,
-#section1 img{
-	margin: 20px 0 0 0;
-}	
-#section2 img{
-	margin: 20px 0 0 52px;	
-}
-
-.intro p{
-	width: 50%;
-	margin: 0 auto;
-	font-size: 1.25em;
-}
-
-
-.background {
-	background-color:rgb(163, 159, 247);
 	
-}
-	
-.invite {
-	height:445px;
-	width:500px;
-}
-	
-.invite2 {
-	height:445px;
-	width:600px;
-}
-.photos {
-	height:270px; 
-	width:325px;
-}
-	
-h1, h2, h3{
-	text-align:center;
-	font-family: Georgia;
-	
-}
-
-h2{
-	font-size:30px;
-}
-	
-h3{
-	font-size:20px;
-}
-	
-
-.rsvp_ww{
- min-height: 425px;
- max-height: 425px;
- }
 
 
 
@@ -213,8 +107,4 @@ h3{
  
  
    
-    .row > div {
-        background-color: #dedef8;
-        box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;
-    }
     
