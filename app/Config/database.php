@@ -82,5 +82,5 @@ class DATABASE_CONFIG {
 		'database' => 'wordofmouthdb',
 		'prefix' => '',
 		//'encoding' => 'utf8',
-	);
-} */
+	);*/
+} 

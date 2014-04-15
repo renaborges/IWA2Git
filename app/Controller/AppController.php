@@ -35,8 +35,8 @@ App::uses('Controller', 'Controller');
         'Session',
         'Auth' => array(
             'loginRedirect' => array(
-                'controller' => 'posts',
-                'action' => 'index'
+                'controller' => 'users',
+                'action' => 'home'
             ),
             'logoutRedirect' => array(
                 'controller' => 'pages',
