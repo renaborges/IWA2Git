@@ -3,7 +3,7 @@
 	public $components = array('Session');
 
     public function index() {
-        $this->set('posts', $this->Post->find('all'));
+        $this->set('home', $this->Post->find('all'));
 		
 	}
 		
